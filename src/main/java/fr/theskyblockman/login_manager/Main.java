@@ -89,6 +89,11 @@ public final class Main extends JavaPlugin implements Listener {
                 }
                 rs.close();
             } else {
+                if(event.getMessage().length() > 32 || event.getMessage().contains(" ")) {
+                    event.getPlayer().sendMessage(ChatColor.RED + "Your password must not use any spaces and be at max 32 characters.");
+                    connection.close();
+                    return;
+                }
                 PreparedStatement setPassword = connection.prepareStatement(addPlayerPassword);
                 setPassword.setString(1, event.getPlayer().getName());
                 setPassword.setString(2, event.getMessage());
@@ -97,6 +102,7 @@ public final class Main extends JavaPlugin implements Listener {
 
                 event.getPlayer().sendMessage(ChatColor.GREEN + "Welcome, your password has been saved !");
             }
+            connection.close();
         }
     }
 

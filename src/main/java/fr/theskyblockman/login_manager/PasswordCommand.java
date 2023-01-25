@@ -33,7 +33,6 @@ public class PasswordCommand implements TabExecutor {
                     return false;
                 }
 
-
                 try {
                     Connection connection = Main.openConnection();
                     assert connection != null;
