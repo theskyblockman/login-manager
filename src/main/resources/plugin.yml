@@ -1,0 +1,11 @@
+name: 'Login-Manager'
+version: '${project.version}'
+main: fr.theskyblockman.login_manager.Main
+authors: [ theskyblockman ]
+description: A plugin to manage passwords on login
+website: https://github.com/theskyblockman/login-manager
+database: true
+commands:
+  password:
+    description: Vous permet de modifier votre mot de passe.
+    usage: /password set <password>

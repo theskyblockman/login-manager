@@ -1,0 +1,5 @@
+database:
+  ip: 127.0.0.1
+  name: users_login
+  user: root
+  password: root
