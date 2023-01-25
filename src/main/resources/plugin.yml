@@ -1,5 +1,6 @@
 name: 'Login-Manager'
 version: '${project.version}'
+api-version: 1.9
 main: fr.theskyblockman.login_manager.Main
 authors: [ theskyblockman ]
 description: A plugin to manage passwords on login
